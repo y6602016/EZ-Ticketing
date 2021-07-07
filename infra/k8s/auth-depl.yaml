@@ -17,6 +17,12 @@ spec:
           # image: us.gcr.io/ticketing-dev-318910/auth
           # cloud host: 104.198.60.26
           image: y6602016/auth
+          env:
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
 ---
 apiVersion: v1
 kind: Service
