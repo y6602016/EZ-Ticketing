@@ -1,6 +1,18 @@
 {
   "name": "@miketickets/common",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "clean": "del ./build/*",
+    "build": "yarn clean && tsc"
+  },
+  "devDependencies": {
+    "del-cli": "^4.0.0",
+    "typescript": "^4.3.5"
+  }
 }
