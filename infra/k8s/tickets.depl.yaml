@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tickets-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tickets
+  template:
+    metadata:
+      labels:
+        app: tickets
+    spec:
+      containers:
+        - name: tickets
+          # image: us.gcr.io/ticketing-dev-318910/tickets
+          # cloud host: 104.198.60.26
+          image: y6602016/tickets
+          env:
+            - name: JWT_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret
+                  key: JWT_KEY
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tickets-srv
+spec:
+  selector:
+    app: tickets
+  ports:
+    - name: tickets
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
