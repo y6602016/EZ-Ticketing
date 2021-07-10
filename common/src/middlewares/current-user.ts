@@ -14,7 +14,7 @@ declare global {
     }
   }
 }
-
+console.log("test");
 export const currentUser = (
   req: Request,
   res: Response,
