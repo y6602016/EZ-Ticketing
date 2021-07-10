@@ -498,10 +498,10 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
-"@miketickets/common@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@miketickets/common/-/common-1.0.9.tgz#6b70887b941b599b05b649150fbdaf6b6ffc2c8a"
-  integrity sha512-W5ZwXeXU6j28SD77LsguqVAHxVuc+g1UswxUYjSwOIrrJNy9SWG0weLjtfAvrAUY9e6RL95+tHEPx3xJ5s4ejw==
+"@miketickets/common@^1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@miketickets/common/-/common-1.0.11.tgz#511978a8daabae52a3376db6df9053133056456e"
+  integrity sha512-dENZ/EpnpozHAd9ZEKnuxumc/BscZO6uA73oHjsmac2yJIyuVhID51HLKcOBUh4PyzChdUu26DWqixv8/gbeDw==
   dependencies:
     "@types/cookie-session" "^2.0.43"
     "@types/express" "^4.17.13"
