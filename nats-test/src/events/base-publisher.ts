@@ -1,6 +1,4 @@
-import { rejects } from "assert/strict";
-import { Message, Stan } from "node-nats-streaming";
-import { resolve } from "path/posix";
+import { Stan } from "node-nats-streaming";
 import { Subjects } from "./subjects";
 
 interface Event {
