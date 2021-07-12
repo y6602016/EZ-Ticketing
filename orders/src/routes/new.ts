@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
 import express, { Request, Response } from "express";
 import { body } from "express-validator";
-import { BadRequestError, OrderStatus } from "@miketickets/common";
 
 import {
   requireAuth,
   validateRequest,
   NotFoundError,
+  BadRequestError,
+  OrderStatus,
 } from "@miketickets/common";
 import { Ticket } from "../models/ticket";
 import { Order } from "../models/order";
@@ -57,7 +58,8 @@ router.post(
     await order.save();
 
     // Publish an event saying that and order was created
-    res.send(201).send(order);
+
+    res.status(201).send(order);
   }
 );
 
