@@ -42,3 +42,11 @@ build:
         manual:
           - src: "src/**/*.ts"
             dest: .
+    - image: y6602016/expiration
+      context: expiration
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: "src/**/*.ts"
+            dest: .
