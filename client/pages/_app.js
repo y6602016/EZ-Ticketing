@@ -17,7 +17,7 @@ AppComponent.getInitialProps = async (appContext) => {
   const client = buildClient(appContext.ctx);
   const { data } = await client.get("/api/users/currentuser");
 
-  // call the inner page's (such as index) get initialProps here
+  // call the inner page's (such as index.js) get initialProps here
   // if we call getInitailProps in app, inner page's getInitailProps won't call
   let pageProps = {};
   if (appContext.Component.getInitialProps) {
@@ -27,6 +27,8 @@ AppComponent.getInitialProps = async (appContext) => {
       data.currentUser
     );
   }
+
+  // return inner pages's props with currentuser state
   return {
     pageProps,
     ...data,
